@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.categoryBtn-group{
+    overflow:auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.categoryBtn-group::-webkit-scrollbar{
+    display: none;}
