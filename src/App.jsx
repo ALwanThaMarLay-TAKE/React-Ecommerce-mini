@@ -7,10 +7,10 @@ import ProductSection from './components/ProductSection'
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Categories/>
       <ProductSection/>
-      <Footer/>
+      <Footer/> */}
  
     </>
   )
