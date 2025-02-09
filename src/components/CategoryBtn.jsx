@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { act } from 'react'
+import useCategoriesStore from '../store/useCategoriesStore'
 
-const CategoryBtn = ({category ,current}) => {
+const CategoryBtn = ({category:{
+  id,name,isActive
+}}) => {
+  const {activeCategory} = useCategoriesStore()
+  const handleActive = () => {
+    activeCategory(id)
+    
+  }
   return (
-    <button className={`${current &&  'bg-black text-white'} text-nowrap border border-black px-4 py-2 me-2`}> 
-    {category}
+    <button onClick={handleActive} className={`${isActive &&  'bg-black text-white'} text-nowrap border border-black px-4 py-2 me-2`}> 
+    {name}
               </button>
   )
 }

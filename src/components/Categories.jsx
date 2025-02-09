@@ -1,16 +1,12 @@
 import React from 'react'
 import Container from './Container'
 import CategoryBtn from './CategoryBtn'
+import useCategoriesStore from '../store/useCategoriesStore'
 
 
 const Categories = () => {
-  const categories = [
+  const {categories} = useCategoriesStore()
  
-    "electronics",
-    "jewelery",
-    "men's clothing",
-    "women's clothing"
-    ]
   return (
     <Container>
     <section >
@@ -19,9 +15,9 @@ const Categories = () => {
 
       </p>
       <div className='flex overflow-x-scroll categoryBtn-group'>
-    <CategoryBtn category={"All"} current={true}/>
+   
         {categories.map((cat)=> (
-         <CategoryBtn key={cat} category={cat} current={false}/>
+         <CategoryBtn key={cat.id} category={cat} />
         ))}
       </div>
 
